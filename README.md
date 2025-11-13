@@ -5,12 +5,18 @@
 
 Generate URLs to [railway.com](https://railway.com) resources.
 
+## Installation
+
+```bash
+bun add @railway/urls
+```
+
 ## Usage
 
 Use the default instance for standard Railway URLs:
 
 ```ts
-import { railwayUrls } from "railway-urls";
+import { railwayUrls } from "@railway/urls";
 
 railwayUrls.project({ projectId: "abc123" });
 // https://railway.com/project/abc123
