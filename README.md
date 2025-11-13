@@ -1,5 +1,7 @@
 # railway-urls
 
+![NPM Version](https://img.shields.io/npm/v/%40railway%2Furls)
+
 Generate URLs to [railway.com](https://railway.com) resources.
 
 ## Usage
