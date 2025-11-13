@@ -1,5 +1,5 @@
 {
-  "name": "railway-urls",
+  "name": "@railway/urls",
   "version": "0.1.0",
   "description": "Generate links to Railway resources",
   "license": "MIT",
