@@ -80,6 +80,15 @@ export type WorkspaceTemplateBucketParams = {
 	bucketId: string;
 };
 
+export type ResourceParams = {
+	projectId: string;
+	environmentId?: string | null;
+	groupId?: string | null;
+	serviceId?: string | null;
+	volumeId?: string | null;
+	bucketId?: string | null;
+};
+
 // Helper function to build URLs
 function buildUrl(
 	baseUrl: string,
@@ -846,6 +855,33 @@ export class RailwayUrls {
 	// User profile
 	userProfile({ username }: { username: string }): string {
 		return buildUrl(this.baseUrl, `/u/${username}`);
+	}
+
+	// Smart resource inference
+	resource(params: ResourceParams): string {
+		if (params.serviceId) {
+			return this.projectServiceDeployments({
+				projectId: params.projectId,
+				serviceId: params.serviceId,
+				environmentId: params.environmentId,
+				groupId: params.groupId,
+			});
+		}
+		if (params.volumeId) {
+			return this.projectVolumeMetrics({
+				projectId: params.projectId,
+				volumeId: params.volumeId,
+				environmentId: params.environmentId,
+			});
+		}
+		if (params.bucketId) {
+			return this.projectBucketFiles({
+				projectId: params.projectId,
+				bucketId: params.bucketId,
+				environmentId: params.environmentId,
+			});
+		}
+		return this.project(params);
 	}
 }
 
