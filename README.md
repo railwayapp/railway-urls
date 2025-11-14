@@ -1,6 +1,6 @@
 # Railway URLs
 
-![NPM Version](https://img.shields.io/npm/v/%40railway%2Furls)
+[![NPM Version](https://img.shields.io/npm/v/%40railway%2Furls)](https://www.npmjs.com/package/@railway/urls)
 [![CI](https://github.com/railwayapp/railway-urls/actions/workflows/ci.yml/badge.svg)](https://github.com/railwayapp/railway-urls/actions/workflows/ci.yml)
 
 Generate URLs to [railway.com](https://railway.com) resources.
