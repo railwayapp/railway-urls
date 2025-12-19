@@ -1,6 +1,6 @@
 {
   "name": "@railway/urls",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Generate links to Railway resources",
   "license": "MIT",
   "files": [
