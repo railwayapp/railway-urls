@@ -85,6 +85,7 @@ export type ResourceParams = {
 	environmentId?: string | null;
 	groupId?: string | null;
 	serviceId?: string | null;
+	deploymentId?: string | null;
 	volumeId?: string | null;
 	bucketId?: string | null;
 };
@@ -865,6 +866,7 @@ export class RailwayUrls {
 				serviceId: params.serviceId,
 				environmentId: params.environmentId,
 				groupId: params.groupId,
+				deploymentId: params.deploymentId,
 			});
 		}
 		if (params.volumeId) {

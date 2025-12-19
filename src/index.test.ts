@@ -482,6 +482,17 @@ describe("RailwayUrls", () => {
         "https://railway.com/project/proj-123/service/svc-456?environmentId=env-prod&groupId=group-abc"
       );
 
+      // Service with deploymentId
+      expect(
+        railwayUrls.resource({
+          projectId: "proj-123",
+          serviceId: "svc-456",
+          deploymentId: "deploy-789",
+        })
+      ).toBe(
+        "https://railway.com/project/proj-123/service/svc-456?id=deploy-789"
+      );
+
       // Volume
       expect(
         railwayUrls.resource({
